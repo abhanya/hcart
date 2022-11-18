@@ -1,0 +1,207 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/custhome.css' %}">
+</head>
+<body>
+  
+    <div class="log">
+     <a href="{% url 'clogin' %}"> <button type="button" class="btn btn-warning" height="32px">LOGIN</button></a>
+      <p>Shipping world wide|COD available</p>
+      <p>register for telegram broadcast</p>
+      <!-- <div class="badge bg-primary text-wrap" style="width: 6rem;">
+        LOGIN
+      </div> -->
+    </div>
+    <div class="div2">
+      {% block content %}
+        <nav class="navbar navbar-expand-lg bg-light">
+              <img src="{% static 'images/752.jpg' %}" class="img">
+              <button type="button" class="btn btn-light">Best of</button>
+              <button type="button" class="btn btn-light">Track order</button>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <!-- <li class="nav-item">
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li> -->
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      category
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">New collections</a></li>
+                      <li><a class="dropdown-item" href="#">Fabrics</a></li>
+                      <li><a class="dropdown-item" href="#">Clothings</a></li>
+                      <li><a class="dropdown-item" href="#">Home&kitchens</a></li>
+                      <li><a class="dropdown-item" href="#">Personal care</a></li>
+                      <li><a class="dropdown-item" href="#">Jwellry's,Accessories&Bags</a></li>
+                      <li><a class="dropdown-item" href="#">Stationary&Toys</a></li>
+                      <li><a class="dropdown-item" href="#">Gifting</a></li>
+                      <li><a class="dropdown-item" href="#">FaceMasks</a></li>
+                    </ul>
+                  </li> 
+
+                <!-- <a class="nav-link active" aria-current="page" href="#">Best of</a -->
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Crafts
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">New collections</a></li>
+                      <li><a class="dropdown-item" href="#">Fabrics</a></li>
+                      <li><a class="dropdown-item" href="#">Clothings</a></li>
+                      <li><a class="dropdown-item" href="#">Home&kitchens</a></li>
+                      <li><a class="dropdown-item" href="#">Personal care</a></li>
+                      <li><a class="dropdown-item" href="#">Jwellry's,Accessories&Bags</a></li>
+                      <li><a class="dropdown-item" href="#">Stationary&Toys</a></li>
+                      <li><a class="dropdown-item" href="#">Gifting</a></li>
+                      <li><a class="dropdown-item" href="#">FaceMasks</a></li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <!-- <a class="nav-link active" aria-current="page" href="#">Track order</a> -->
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </div>
+    {% endblock %}
+    <br><br>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <!-- <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div> -->
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="{% static 'images/bg.webp' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="h1">CRAFTS Everyday!</h1>
+            <h3 class="h3">India's best handpicked Artisanal products</h3>
+            
+          </div>
+        </div>
+        <!-- <div class="carousel-item" data-bs-interval="2000">
+          <img src="{% static 'images/bg2.jpg' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div> -->
+      <!-- </div> -->
+      <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button> -->
+      
+    </div><br><br><br>
+  
+          <div class="start">
+              check our NEW COLLECTIONS !
+          </div><br>
+          <div class="cards">
+            <div class="card" style="width: 18rem;">
+              <img src="{% static 'images/im1.webp' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">3pc phulkari suit set.</h5>
+                <p class="card-text">from punjab</p>
+                <a href="#" class="btn btn-primary">buy now</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <img src="{% static 'images/im2.avif' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">silver coins and sindoor box</h5>
+                <p class="card-text">Special gift</p>
+                <a href="#" class="btn btn-primary">buy now</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <img src="{% static 'images/im3.avif' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Table linen set</h5>
+                <p class="card-text">from bangluru</p>
+                <a href="#" class="btn btn-primary">buy now</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <img src="{% static 'images/im4.webp' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">men's kurtha</h5>
+                <p class="card-text">from gujarath</p>
+                <a href="#" class="btn btn-primary">buy now</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <img src="{% static 'images/im5.avif' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Curtains and wall hangins</h5>
+                <p class="card-text">from manglore</p>
+                <a href="#" class="btn btn-primary">buy now</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <img src="{% static 'images/im6.avif' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">kanjipuram kaftans</h5>
+                <p class="card-text">from chennai</p>
+                <a href="#" class="btn btn-primary">buy now</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <img src="{% static 'images/im7.avif' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">multy purpose pouch</h5>
+                <p class="card-text">from hyderabad</p>
+                <a href="#" class="btn btn-primary">buy now</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <img src="{% static 'images/im7.webp' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">printed stall</h5>
+                <p class="card-text">from kochi</p>
+                <a href="#" class="btn btn-primary">buy now</a>
+              </div>
+            </div>
+
+          </div>
+          
+</body>
+</html>
